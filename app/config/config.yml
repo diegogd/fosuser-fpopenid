@@ -5,6 +5,7 @@ imports:
 framework:
     #esi:             ~
     #translator:      { fallback: %locale% }
+    translator:      ~
     secret:          %secret%
     charset:         UTF-8
     router:          { resource: "%kernel.root_dir%/config/routing.yml" }
@@ -57,3 +58,20 @@ swiftmailer:
 jms_security_extra:
     secure_controllers:  true
     secure_all_services: false
+    
+fos_user:
+  db_driver: orm # other valid values are 'mongodb', 'couchdb'
+  firewall_name: main
+  user_class: SC\UsersBundle\Entity\User
+
+fp_open_id:
+  provider:    
+    return_route:     'fos_user_security_check'
+    roles:            [ROLE_USER]
+    approve_route:    'sc_users_security_login'
+  consumers:
+    light_open_id:
+        trust_root:   'myhost.com'
+        required:     [ contact/email ]
+        optional:     [ namePerson, namePerson/first ]
+

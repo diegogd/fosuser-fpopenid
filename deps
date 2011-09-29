@@ -59,3 +59,14 @@
     git=http://github.com/symfony/AsseticBundle.git
     target=/bundles/Symfony/Bundle/AsseticBundle
     version=v1.0.1
+
+[FOSUserBundle]
+    git=git://github.com/FriendsOfSymfony/FOSUserBundle.git
+    target=bundles/FOS/UserBundle
+
+[FpOpenIdBundle]
+    git=http://github.com/formapro/FpOpenIdBundle.git
+    target=/bundles/Fp/OpenIdBundle
+
+[lightopenid]
+    git=git://gitorious.org/lightopenid/lightopenid.git

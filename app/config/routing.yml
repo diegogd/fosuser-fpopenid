@@ -2,3 +2,6 @@
 #_internal:
 #   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
 #   prefix:   /_internal
+SCUsersBundle:
+    resource: '@SCUsersBundle/Resources/config/routing/security.xml'
+    prefix: /openid

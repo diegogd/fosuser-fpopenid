@@ -1,5 +1,7 @@
-vendors
+vendor
 app/cache
 app/logs
 app/config/parameters.ini
 web/bundles
+/nbproject/private/
+nbproject
